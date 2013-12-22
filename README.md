@@ -1,4 +1,4 @@
-cengizism.github.io
+Cengizism.github.io
 ===================
 
 Github Welcoming Page
