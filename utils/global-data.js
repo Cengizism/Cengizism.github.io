@@ -7,7 +7,7 @@ export const getGlobalData = () => {
     : 'Personal portfolio';
   const footerText = process.env.BLOG_FOOTER_TEXT
     ? decodeURI(process.env.BLOG_FOOTER_TEXT)
-    : 'All rights reserved.';
+    : 'All rights reserved. Cengizism';
 
   return {
     name,
