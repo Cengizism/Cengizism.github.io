@@ -98,7 +98,7 @@ export default function Contact() {
       <Header />
       <main className="w-full">
         <section className="mt-12">
-          <Title>Let's talk</Title>
+          <Title>Let&apos;s talk</Title>
 
           <div className="mx-auto">
             <p className="dark:text-gray-200 text-center">

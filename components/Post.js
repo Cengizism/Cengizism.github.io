@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import ArrowIcon from './ArrowIcon';
 
 export default function Post(post) {
@@ -15,7 +16,12 @@ export default function Post(post) {
         <a className="py-6 lg:py-8 px-2 lg:px-8 block focus:outline-none focus:ring-4">
           <div className="flex flex-row">
             <div className="basis-3/12">
-              <img src="https://picsum.photos/180/180" />
+              <Image
+                src="https://picsum.photos/180/180"
+                alt="Post cover"
+                width={180}
+                height={180}
+              />
             </div>
             <div className="basis-9/12">
               {post.data.date && (

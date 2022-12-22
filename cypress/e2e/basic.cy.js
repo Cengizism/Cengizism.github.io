@@ -4,6 +4,6 @@ describe('sample render test', () => {
   });
 
   it('displays the title text', () => {
-    cy.get('h1').contains('Personal portfolio');
+    cy.get('h1').contains('Hi there! 👋🏼');
   });
 });

@@ -16,7 +16,7 @@ export default function About() {
         <section className="mt-12">
           <Title>Nice to meet with you</Title>
           <p className='mt-6 mb-8'>
-            I'm Cengiz Ulusoy, an User Experience designer and a fanatic creator
+            I am Cengiz Ulusoy, an User Experience designer and a fanatic creator
             of innovative user-centric digital products and services. I always
             aim to bring my skills of usability, motion and visual design as
             well as rapid prototyping backed with many years of experience in
@@ -47,7 +47,7 @@ export default function About() {
 
           <p className='mb-8'>My motto is “Simplicity is the ultimate sophistication!”</p>
 
-          <Title>Clients I've worked for</Title>
+          <Title>Clients worked for</Title>
 
           <div className='flex flex-wrap'>
             <div className="basis-1/2">Alten</div>
