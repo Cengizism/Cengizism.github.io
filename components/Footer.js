@@ -1,89 +1,52 @@
-const sunIcon = (
+import Link from 'next/link';
+
+const github = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="25"
+    width="24"
     height="24"
-    fill="none"
-    viewBox="0 0 25 24"
-    className="dark:opacity-50"
+    fill="gray"
+    viewBox="0 0 24 24"
   >
-    <g
-      stroke="#fff"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      clipPath="url(#clip0_192_823)"
-    >
-      <path d="M12.5 17a5 5 0 100-10 5 5 0 000 10zM12.5 1v2M12.5 21v2M4.72 4.22l1.42 1.42M18.86 18.36l1.42 1.42M1.5 12h2M21.5 12h2M4.72 19.78l1.42-1.42M18.86 5.64l1.42-1.42"></path>
-    </g>
-    <defs>
-      <clipPath id="clip0_192_823">
-        <path
-          className="fill-current text-white"
-          d="M0 0H24V24H0z"
-          transform="translate(.5)"
-        ></path>
-      </clipPath>
-    </defs>
+    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
   </svg>
 );
 
-const moonIcon = (
+const linkedIn = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="21"
-    height="20"
-    fill="none"
-    viewBox="0 0 21 20"
+    width="24"
+    height="24"
+    fill="gray"
+    viewBox="0 0 24 24"
   >
-    <path
-      stroke="#fff"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      className="stroke-current text-gray-400 dark:text-white"
-      d="M19.5 10.79A9 9 0 119.71 1a7 7 0 009.79 9.79v0z"
-    ></path>
+    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
   </svg>
 );
 
-const ThemeSwitcher = () => {
+export default function Footer() {
   return (
-    <div className="flex mt-6 bg-white justify-center dark:bg-gray-900 rounded-3xl p-1">
-      <button
-        type="button"
-        aria-label="Use Dark Mode"
-        onClick={() => {
-          document.documentElement.classList.add('dark');
-          localStorage.setItem('theme', 'dark');
-        }}
-        className="flex items-center h-full pr-2 dark:bg-primary rounded-3xl flex justify-center align-center p-2 w-24 h-10 transition"
-      >
-        {moonIcon}
-      </button>
-
-      <button
-        type="button"
-        aria-label="Use Light Mode"
-        onClick={() => {
-          document.documentElement.classList.remove('dark');
-          localStorage.setItem('theme', 'light');
-        }}
-        className="flex items-center h-full pr-2 bg-primary dark:bg-transparent rounded-3xl flex justify-center align-center p-2 w-24 h-10 transition"
-      >
-        {sunIcon}
-      </button>
-    </div>
-  );
-};
-
-export default function Footer({ copyrightText }) {
-  return (
-    <footer className="py-16 flex flex-col items-center">
-      <p className="dark:text-white uppercase mb-3 font-bold opacity-60">
-        {copyrightText}
-      </p>
-      <ThemeSwitcher />
+    <footer className="flex flex-col items-center mt-12">
+      <div className="flex flex-row">
+        <div className="basis-1/2 pr-1">
+          <Link href="https://github.com/cengizism" legacyBehavior>
+            <a target="_blank" className="inline">
+              {github}
+            </a>
+          </Link>
+        </div>
+        <div className="basis-1/2 pl-1">
+          <Link
+            href="https://www.linkedin.com/in/cengiz-ulusoy/"
+            legacyBehavior
+          >
+            <a target="_blank" className="inline">
+              {linkedIn}
+            </a>
+          </Link>
+        </div>
+      </div>
+      <p className="mt-2 text-sm text-slate-500 dark:text-white">2023</p>
     </footer>
   );
 }

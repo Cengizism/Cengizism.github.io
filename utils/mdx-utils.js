@@ -39,6 +39,12 @@ export const getPosts = () => {
   return posts;
 };
 
+export const getShowcases = () => {
+  let posts = getPosts();
+
+  return posts.filter((post) => post.data.showcase);
+};
+
 export const getPostBySlug = async (slug) => {
   const postFilePath = path.join(POSTS_PATH, `${slug}.mdx`);
   const source = fs.readFileSync(postFilePath);

@@ -1,14 +1,41 @@
 import Link from 'next/link';
+import ThemeSwitcher from './ThemeSwitcher';
 
-export default function Header({ name }) {
+export default function Header() {
   return (
-    <header className="pt-20 pb-12">
-      <div className="w-12 h-12 rounded-full block mx-auto mb-4 bg-gradient-conic from-gradient-3 to-gradient-4" />
-      <p className="text-2xl dark:text-white text-center">
-        <Link legacyBehavior href="/">
-          <a>{name}</a>
-        </Link>
-      </p>
-    </header>
+    <>
+      <ThemeSwitcher />
+      <header className="mt-12 --mb-6">
+        <p className="text-2xl dark:text-white text-center">
+          <Link legacyBehavior href="/">
+            <a className="hover:text-primary">
+              <img
+                className="block mx-auto h-24 rounded-full mb-2 --sm:mx-0 --sm:shrink-0"
+                src="/cengiz-ulusoy.jpg"
+                alt="test"
+              ></img>
+              Cengiz Ulusoy
+            </a>
+          </Link>
+        </p>
+        <ul className="flex mt-3 text-base font-semibold uppercase">
+          <li className="mx-4">
+            <Link legacyBehavior href="/about">
+              <a className="hover:text-primary transition">About</a>
+            </Link>
+          </li>
+          <li className="mx-4">
+            <Link legacyBehavior href="/work">
+              <a className="hover:text-primary transition">Work</a>
+            </Link>
+          </li>
+          <li className="mx-4">
+            <Link legacyBehavior href="/contact">
+              <a className="hover:text-primary transition">Contact</a>
+            </Link>
+          </li>
+        </ul>
+      </header>
+    </>
   );
 }

@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { useEffect } from 'react';
 import styles from './Layout.module.css';
 
-export function GradientBackground({ variant, className }) {
+function GradientBackground({ variant, className }) {
   const classes = classNames(
     {
       [styles.colorBackground]: variant === 'large',
@@ -51,9 +51,17 @@ export default function Layout({ children }) {
 
   return (
     <div className="relative pb-24 overflow-hidden">
-      <div className="flex flex-col items-center max-w-2xl w-full mx-auto">
+      <div className="flex flex-col items-center max-w-4xl w-full mx-auto">
         {children}
       </div>
+      <GradientBackground
+        variant="large"
+        className="fixed top-20 opacity-20 dark:opacity-20"
+      />
+      <GradientBackground
+        variant="small"
+        className="fixed bottom-0 opacity-10 dark:opacity-10"
+      />
     </div>
   );
 }

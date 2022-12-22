@@ -10,7 +10,7 @@ class MyDocument extends Document {
         <Head />
         <Script
           strategy="lazyOnload"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-KL4QWK9J60`}
+          src="https://www.googletagmanager.com/gtag/js?id=G-KL4QWK9J60"
         />
         <Script id="google-analytics" strategy="lazyOnload">
           {`

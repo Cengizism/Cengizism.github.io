@@ -1,10 +1,10 @@
+import { getShowcases } from '../utils/mdx-utils';
+import Post from '../components/Post';
 import Link from 'next/link';
-import { getPosts } from '../utils/mdx-utils';
-
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import Layout, { GradientBackground } from '../components/Layout';
-import ArrowIcon from '../components/ArrowIcon';
+import Layout from '../components/Layout';
+import Title from '../components/Title';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 
@@ -12,55 +12,44 @@ export default function Index({ posts, globalData }) {
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
-      <Header name={globalData.name} />
+      <Header />
       <main className="w-full">
-        <h1 className="text-3xl lg:text-5xl text-center mb-12">
-          {globalData.blogTitle}
-        </h1>
-        <ul className="w-full">
-          {posts.map((post) => (
-            <li
-              key={post.filePath}
-              className="md:first:rounded-t-lg md:last:rounded-b-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 border-b-0 last:border-b hover:border-b hovered-sibling:border-t-0"
-            >
-              <Link legacyBehavior
-                as={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}
-                href={`/posts/[slug]`}
-              >
-                <a className="py-6 lg:py-10 px-6 lg:px-16 block focus:outline-none focus:ring-4">
-                  {post.data.date && (
-                    <p className="uppercase mb-3 font-bold opacity-60">
-                      {post.data.date}
-                    </p>
-                  )}
-                  <h2 className="text-2xl md:text-3xl">{post.data.title}</h2>
-                  {post.data.description && (
-                    <p className="mt-3 text-lg opacity-60">
-                      {post.data.description}
-                    </p>
-                  )}
-                  <ArrowIcon className="mt-4" />
-                </a>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <section className="mt-12 text-center">
+          <Title>Hi there! 👋🏼</Title>
+          <p className="text-2xl mb-8">
+            I am an User Experience designer and a Frontend developer.
+            <br />I care about the process and methodolodgy in bringing the
+            product to life. Taking the problem, breaking it down ,and crafting
+            the experience arround it by understanding, emphathy, observing and
+            iterating.
+          </p>
+          <Link href="/contact" legacyBehavior>
+            <a className="px-4 py-2 text-base uppercase text-white font-semibold bg-red-600 hover:bg-opacity-70 transition focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2">
+              Lets talk further
+            </a>
+          </Link>
+        </section>
+        {/* <section>
+          <Title>Showcases</Title>
+          <ul className="w-full">{posts.map((item) => Post(item))}</ul>
+        </section> */}
+        <section className="mt-12">
+          <blockquote className="text-center">
+            <p className="font-light italic text-3xl">
+              “<strong>Simplicity</strong> is the ultimate{' '}
+              <strong>sophistication</strong>.”
+            </p>
+            <cite className='uppercase not-italic text-base'>Leonardo Da Vinci</cite>
+          </blockquote>
+        </section>
       </main>
-      <Footer copyrightText={globalData.footerText} />
-      <GradientBackground
-        variant="large"
-        className="fixed top-20 opacity-40 dark:opacity-60"
-      />
-      <GradientBackground
-        variant="small"
-        className="absolute bottom-0 opacity-20 dark:opacity-10"
-      />
+      <Footer />
     </Layout>
   );
 }
 
 export function getStaticProps() {
-  const posts = getPosts();
+  const posts = getShowcases();
   const globalData = getGlobalData();
 
   return { props: { posts, globalData } };
