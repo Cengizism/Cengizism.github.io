@@ -11,13 +11,13 @@ export default function Header() {
           <Link legacyBehavior href="/">
             <a className="hover:text-primary">
               <Image
-                className="block mx-auto h-24 rounded-full mb-2 --sm:mx-0 --sm:shrink-0"
+                className="block mx-auto h-24 rounded-full mb-2"
                 src="/cengiz-ulusoy.jpg"
                 alt="test"
                 width={98}
                 height={96}
               />
-              Cengiz Ulusoy
+              <span className='block'>Cengiz Ulusoy</span>
             </a>
           </Link>
         </p>
