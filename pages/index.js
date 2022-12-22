@@ -23,8 +23,14 @@ export default function Index({ posts, globalData }) {
             the experience arround it by understanding, emphathy, observing and
             iterating.
           </p>
-          <Link href="/contact" legacyBehavior>
-            <a className="px-4 py-2 text-base uppercase text-white font-semibold bg-red-600 hover:bg-opacity-70 transition focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2">
+          <Link
+            href="https://docs.google.com/forms/d/e/1FAIpQLSe3ZJHtJuyoqrh-pI8GdWyMmuf01vtOH2Y3W14SWRSufIZ8SA/viewform"
+            legacyBehavior
+          >
+            <a
+              className="px-4 py-2 text-base uppercase text-white font-semibold bg-red-600 hover:bg-opacity-70 transition focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2"
+              target="_blank"
+            >
               Lets talk further
             </a>
           </Link>
@@ -39,7 +45,9 @@ export default function Index({ posts, globalData }) {
               “<strong>Simplicity</strong> is the ultimate{' '}
               <strong>sophistication</strong>.”
             </p>
-            <cite className='uppercase not-italic text-base'>Leonardo Da Vinci</cite>
+            <cite className="uppercase not-italic text-base">
+              Leonardo Da Vinci
+            </cite>
           </blockquote>
         </section>
       </main>

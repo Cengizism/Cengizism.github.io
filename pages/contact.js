@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Layout from '../components/Layout';
@@ -9,88 +10,88 @@ import SEO from '../components/SEO';
 export default function Contact() {
   let globalData = getGlobalData();
 
-  const [fullname, setFullname] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+  // const [fullname, setFullname] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [subject, setSubject] = useState('');
+  // const [message, setMessage] = useState('');
 
-  const [errors, setErrors] = useState({});
+  // const [errors, setErrors] = useState({});
 
-  const [buttonText, setButtonText] = useState('Send a message');
+  // const [buttonText, setButtonText] = useState('Send a message');
 
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  const [showFailureMessage, setShowFailureMessage] = useState(false);
+  // const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  // const [showFailureMessage, setShowFailureMessage] = useState(false);
 
-  const handleValidation = () => {
-    let tempErrors = {};
-    let isValid = true;
+  // const handleValidation = () => {
+  //   let tempErrors = {};
+  //   let isValid = true;
 
-    if (fullname.length <= 0) {
-      tempErrors['fullname'] = true;
-      isValid = false;
-    }
-    if (email.length <= 0) {
-      tempErrors['email'] = true;
-      isValid = false;
-    }
-    if (subject.length <= 0) {
-      tempErrors['subject'] = true;
-      isValid = false;
-    }
-    if (message.length <= 0) {
-      tempErrors['message'] = true;
-      isValid = false;
-    }
+  //   if (fullname.length <= 0) {
+  //     tempErrors['fullname'] = true;
+  //     isValid = false;
+  //   }
+  //   if (email.length <= 0) {
+  //     tempErrors['email'] = true;
+  //     isValid = false;
+  //   }
+  //   if (subject.length <= 0) {
+  //     tempErrors['subject'] = true;
+  //     isValid = false;
+  //   }
+  //   if (message.length <= 0) {
+  //     tempErrors['message'] = true;
+  //     isValid = false;
+  //   }
 
-    setErrors({ ...tempErrors });
-    console.log('errors', errors);
-    return isValid;
-  };
+  //   setErrors({ ...tempErrors });
+  //   console.log('errors', errors);
+  //   return isValid;
+  // };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    let isValidForm = handleValidation();
+  //   let isValidForm = handleValidation();
 
-    if (isValidForm) {
-      setButtonText('Sending');
-      const res = await fetch('/api/sendgrid', {
-        body: JSON.stringify({
-          email: email,
-          fullname: fullname,
-          subject: subject,
-          message: message,
-        }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        method: 'POST',
-      });
+  //   if (isValidForm) {
+  //     setButtonText('Sending');
+  //     const res = await fetch('/api/sendgrid', {
+  //       body: JSON.stringify({
+  //         email: email,
+  //         fullname: fullname,
+  //         subject: subject,
+  //         message: message,
+  //       }),
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       method: 'POST',
+  //     });
 
-      const { error } = await res.json();
-      if (error) {
-        console.log(error);
-        setShowSuccessMessage(false);
-        setShowFailureMessage(true);
-        setButtonText('Send');
+  //     const { error } = await res.json();
+  //     if (error) {
+  //       console.log(error);
+  //       setShowSuccessMessage(false);
+  //       setShowFailureMessage(true);
+  //       setButtonText('Send');
 
-        setFullname('');
-        setEmail('');
-        setMessage('');
-        setSubject('');
-        return;
-      }
-      setShowSuccessMessage(true);
-      setShowFailureMessage(false);
-      setButtonText('Send');
+  //       setFullname('');
+  //       setEmail('');
+  //       setMessage('');
+  //       setSubject('');
+  //       return;
+  //     }
+  //     setShowSuccessMessage(true);
+  //     setShowFailureMessage(false);
+  //     setButtonText('Send');
 
-      setFullname('');
-      setEmail('');
-      setMessage('');
-      setSubject('');
-    }
-    console.log(fullname, email, subject, message);
-  };
+  //     setFullname('');
+  //     setEmail('');
+  //     setMessage('');
+  //     setSubject('');
+  //   }
+  //   console.log(fullname, email, subject, message);
+  // };
 
   return (
     <Layout>
@@ -105,8 +106,21 @@ export default function Contact() {
               Fill the form and send in your queries. I will respond as soon as
               I can.
             </p>
+            <p className='mt-6 text-center'>
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe3ZJHtJuyoqrh-pI8GdWyMmuf01vtOH2Y3W14SWRSufIZ8SA/viewform"
+              legacyBehavior
+            >
+              <a
+                className="px-4 py-2 text-base uppercase text-white font-semibold bg-red-600 hover:bg-opacity-70 transition focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2"
+                target="_blank"
+              >
+                Lets talk further
+              </a>
+            </Link>
+            </p>
           </div>
-          <form
+          {/* <form
             onSubmit={handleSubmit}
             className="flex flex-col mt-6 px-8 py-8 backdrop-blur-lg bg-gray-500 dark:bg-black dark:bg-opacity-30 bg-opacity-10"
           >
@@ -192,7 +206,7 @@ export default function Contact() {
                 </p>
               )}
             </div>
-          </form>
+          </form> */}
         </section>
       </main>
       <Footer />
