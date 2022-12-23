@@ -49,7 +49,7 @@ const moonIcon = (
 
 export default function ThemeSwitcher() {
   return (
-    <div className="flex p-0.5 bg-white dark:bg-slate-600 border border-slate-600 fixed top-2 right-2">
+    <div className="flex p-0.5 bg-white dark:bg-slate-600 border border-slate-600 absolute top-2 right-2">
       <button
         type="button"
         aria-label="Use Dark Mode"

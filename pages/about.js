@@ -13,7 +13,7 @@ export default function About() {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header />
       <main className="w-full">
-        <section className="mt-12">
+        <section className="mt-12 mx-6">
           <Title>Nice to meet with you</Title>
           <p className='mt-6 mb-8'>
             I am Cengiz Ulusoy, an User Experience designer and a fanatic creator
@@ -38,7 +38,7 @@ export default function About() {
             interactions.
           </p>
 
-          <p>
+          <p className='mb-8'>
             I am always eagerly looking for new challenges in environments that
             will inspire me to use my skills and experience in creating
             innovative user-centric digital products which are loved by their

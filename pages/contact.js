@@ -98,7 +98,7 @@ export default function Contact() {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header />
       <main className="w-full">
-        <section className="mt-12">
+        <section className="mt-12 mx-6">
           <Title>Let&apos;s talk</Title>
 
           <div className="mx-auto">
