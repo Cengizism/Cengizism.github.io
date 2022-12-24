@@ -7,10 +7,10 @@ import * as gtag from '../lib/gtag';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  
+
   useEffect(() => {
-    const handleRouteChange = (url) => {
-      gtag.pageview(url);
+    const handleRouteChange = () => {
+      gtag.pageview(router.pathname);
     };
     router.events.on('routeChangeComplete', handleRouteChange);
     return () => {
