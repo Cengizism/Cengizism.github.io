@@ -22,7 +22,7 @@ export default function Index({ posts, globalData }) {
           {posts.map((post) => (
             <li
               key={post.filePath}
-              className="rounded-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 mb-10 lg:mb-12 mx-10 lg:mx-0"
+              className="rounded-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 mb-6 lg:mb-12 mx-6 lg:mx-0"
             >
               <Link
                 as={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}
