@@ -42,32 +42,15 @@ export default function PostPage({
         title={`${frontMatter.title} - ${globalData.name}`}
         description={frontMatter.description}
       />
-      <Header name={globalData.name} />
+      <Header name={globalData.name} role={globalData.role} />
       <article className="px-6 md:px-0">
         <header>
           <h1 className="text-3xl md:text-5xl dark:text-white text-center mb-8">
             {frontMatter.title}
-
             <p className="dark:text-white uppercase mt-2 mb-3 text-xs font-bold opacity-60">
               {frontMatter.period}
             </p>
           </h1>
-
-          {frontMatter.cover && (
-            <div className="relative h-60 md:h-72 mb-8">
-              <Image
-                src={frontMatter.cover}
-                alt={frontMatter.title}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg"
-              />
-            </div>
-          )}
-
-          {frontMatter.description && (
-            <p className="text-xl text-justify mb-4">{frontMatter.description}</p>
-          )}
         </header>
         <main>
           <article className="prose dark:prose-dark text-justify mt-8 ml-4">
