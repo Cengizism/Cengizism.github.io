@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { getPosts } from '../utils/mdx-utils';
 
 import Footer from '../components/Footer';
@@ -35,6 +35,7 @@ export default function Index({ posts, globalData }) {
                       src={post.data.cover}
                       alt={post.data.title}
                       layout="fill"
+                      priority
                       objectFit="cover"
                       className="rounded-t-lg"
                     />

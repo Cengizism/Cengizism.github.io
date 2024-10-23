@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 export default function Header({ name, role }) {
   return (
@@ -9,13 +9,11 @@ export default function Header({ name, role }) {
           <Image
             className="block mx-auto w-24 h-24 rounded-full mb-2 bg-gradient-conic from-gradient-3 to-gradient-4"
             src="/images/cengiz-ulusoy.jpg"
-            alt="test"
+            alt="Cengiz Ulusoy"
             width={98}
             height={96}
           />
-        </Link>
-        <Link href="/">
-          {name}
+          <span className='block'>{name}</span>
           <span className="block dark:text-white uppercase mt-1 mb-3 text-xs font-bold opacity-50">
             {role}
           </span>
