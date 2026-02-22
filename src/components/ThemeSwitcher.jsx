@@ -40,7 +40,6 @@ export default function ThemeSwitcher() {
         isDark ? 'bg-gray-700' : 'bg-gray-200',
       ].join(' ')}
     >
-      {/* icon track — two equal halves */}
       <span className="absolute inset-0 z-20 flex pointer-events-none">
         <span className="flex-1 flex items-center justify-center">
           <SunIcon stroke={isDark ? 'rgba(255,255,255,0.3)' : '#7D7AFF'} />
@@ -49,7 +48,6 @@ export default function ThemeSwitcher() {
           <MoonIcon stroke={isDark ? '#fff' : 'rgba(0,0,0,0.25)'} />
         </span>
       </span>
-      {/* sliding knob */}
       <span
         className={[
           'relative z-10 w-6 h-6 rounded-full shadow-sm transition-all duration-300',

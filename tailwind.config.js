@@ -9,9 +9,6 @@ export default {
     extend: {
       colors: {
         primary: 'var(--color-primary)',
-        'gradient-1': 'var(--color-gradient-1)',
-        'gradient-2': 'var(--color-gradient-2)',
-        'gradient-3': 'var(--color-gradient-3)',
       },
     },
   },
