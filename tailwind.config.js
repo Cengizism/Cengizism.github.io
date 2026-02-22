@@ -1,9 +1,19 @@
-module.exports = {
-  mode: 'jit',
+/** @type {import('tailwindcss').Config} */
+export default {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    './index.html',
+    './src/**/*.{js,jsx}',
   ],
-  darkMode: 'class', // or 'media' or 'class'
-  presets: [require('./utils/tailwind-preset')],
-};
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        primary: 'var(--color-primary)',
+        'gradient-1': 'var(--color-gradient-1)',
+        'gradient-2': 'var(--color-gradient-2)',
+        'gradient-3': 'var(--color-gradient-3)',
+      },
+    },
+  },
+  plugins: [],
+}
