@@ -1,9 +1,11 @@
+import ThemeSwitcher from './ThemeSwitcher'
+
 export default function Header() {
   return (
     <div className="px-7 pt-7 pb-5 border-b border-black/[0.04] dark:border-white/[0.06]">
       <div className="flex items-center justify-between mb-5">
         <span className="text-black/25 dark:text-white/25 text-[0.65rem] tracking-[0.15em] font-mono">CU</span>
-        <span className="text-black/20 dark:text-white/20 text-[0.6rem] tracking-[0.1em]">NL</span>
+        <ThemeSwitcher />
       </div>
 
       <div className="w-[72px] h-[72px] rounded-full overflow-hidden mx-auto mb-4 border border-black/[0.06] dark:border-white/10 shadow-sm">
