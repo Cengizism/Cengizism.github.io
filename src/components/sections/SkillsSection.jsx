@@ -1,5 +1,5 @@
 const skills = [
-  { category: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'Three.js'] },
+  { category: 'Frontend', items: ['React', 'Vue', 'Angular', 'Next.js', 'TypeScript', 'Three.js'] },
   { category: 'Design', items: ['Figma', 'Design Systems', 'UX Research'] },
   { category: 'Systems', items: ['OAuth / Azure B2C', 'Real-time Data', 'Architecture'] },
 ]
