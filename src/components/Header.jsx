@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <div className="px-7 pt-7 pb-5 border-b border-black/[0.04] dark:border-white/[0.06]">
       <div className="flex items-center justify-between mb-5">
-        <span className="text-black/25 dark:text-white/25 text-[0.65rem] tracking-[0.15em] font-mono">CU</span>
+        <span className="text-black/50 dark:text-white/50 text-[0.65rem] tracking-[0.15em] font-mono">CU</span>
         <ThemeSwitcher />
       </div>
 

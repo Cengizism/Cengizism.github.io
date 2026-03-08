@@ -20,6 +20,14 @@ export default function WorkSection() {
           </span>
         </div>
       ))}
+      <a
+        href="https://www.linkedin.com/in/cengiz-ulusoy"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block pt-4 text-[0.7rem] text-violet-500 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
+      >
+        See more work experiences &rarr;
+      </a>
     </div>
   )
 }

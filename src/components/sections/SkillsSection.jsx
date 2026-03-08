@@ -1,7 +1,8 @@
 const skills = [
-  { category: 'Frontend', items: ['React', 'Vue', 'Angular', 'Next.js', 'TypeScript', 'Three.js'] },
+  { category: 'Frontend', items: ['JavaScript', 'React', 'Vue', 'Angular', 'Next.js', 'TypeScript', 'Three.js', 'RxJS'] },
   { category: 'Design', items: ['Figma', 'Design Systems', 'UX Research'] },
-  { category: 'Systems', items: ['OAuth / Azure B2C', 'Real-time Data', 'Architecture'] },
+  { category: 'Systems', items: ['OAuth', 'Real-time Data', 'Architecture'] },
+  { category: 'Certifications', items: ['UX Masterclass', 'Scrum Master', 'Product Owner', 'Software Architecture', 'Cybersecurity'] },
 ]
 
 export default function SkillsSection() {

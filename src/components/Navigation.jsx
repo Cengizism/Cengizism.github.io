@@ -11,8 +11,8 @@ export default function Navigation({ activeSection, setActiveSection }) {
             'flex-1 py-3 bg-transparent border-none text-[0.65rem] tracking-[0.08em] cursor-pointer transition-all duration-200',
             'border-b -mb-px',
             activeSection === section
-              ? 'border-black/60 dark:border-white/60 text-black/75 dark:text-white/75'
-              : 'border-transparent text-black/30 dark:text-white/30 hover:text-black/50 dark:hover:text-white/50',
+              ? 'border-violet-500 text-violet-600 dark:text-violet-400'
+              : 'border-transparent text-black/50 dark:text-white/50 hover:text-black/50 dark:hover:text-white/50',
           ].join(' ')}
         >
           {section}
