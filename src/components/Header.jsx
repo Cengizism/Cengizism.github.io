@@ -10,7 +10,7 @@ export default function Header() {
 
       <div className="w-[72px] h-[72px] rounded-full overflow-hidden mx-auto mb-4 border border-black/[0.06] dark:border-white/10 shadow-sm">
         <img
-          src="https://cengizism.com/images/cengiz-ulusoy.jpg"
+          src="/images/cengiz-ulusoy.jpg"
           alt="Cengiz Ulusoy"
           className="w-full h-full object-cover"
         />
